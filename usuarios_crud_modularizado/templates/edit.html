@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuario {{datos.id}}</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Edición Usuario {{datos.id}}</h1>
+        <form action="/edit_user" method="POST">
+            <input type='hidden' name='id' value='{{ datos.id }}'>
+            <label for="fname">First Name:</label>
+            <input type="text" name="fname" value="{{datos.first_name}}">
+            <label for="lname">Last Name:</label>
+            <input type="text" name="lname" value="{{datos.last_name}}">
+            <label for="email" >Email:</label>
+            <input type="email" name="email" value="{{datos.email}}">
+            <input type="submit" value="Edit User">
+        </form>
+    </div>
+</body>
+</html>
